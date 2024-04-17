@@ -231,7 +231,12 @@
          var dataRef1 = database.ref('DisjPrincipal/energy');
         dataRef1.on('value',function(getdata1){
          var energ = getdata1.val();
-         document.getElementById('cons1').innerHTML =energ + "w";
+         document.getElementById('cons1').innerHTML =energ + " kwh";
+         });;
+         var dataRef2 = database.ref('DisjPrincipal/power');
+        dataRef2.on('value',function(getdata1){
+         var puiss = getdata1.val();
+         document.getElementById('puis1').innerHTML =puiss + " w";
          });;
            </script>
            <!-- Template Javascript -->
